@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Tập & Ôn Luyện Tác Phẩm: Chí Phèo - Nam Cao</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <header class="bg-gradient-to-r from-amber-800 to-amber-950 text-white shadow-md">
+        <div class="container mx-auto px-4 py-8 text-center relative">
+            <h1 class="text-3xl md:text-5xl font-serif font-bold tracking-wide mb-2">CHÍ PHÈO</h1>
+            <p class="text-amber-200 text-lg md:text-xl italic font-light">Tác giả: Nam Cao — Chương trình Ngữ văn 11 (Bộ Kết nối tri thức với cuộc sống)</p>
+            <div class="mt-4 inline-block bg-amber-700/50 text-amber-100 text-xs px-3 py-1 rounded-full border border-amber-500/30">
+                <i class="fa-solid fa-graduation-cap mr-1"></i> Không gian học tập và ôn luyện trực tuyến dành cho Học sinh
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-2 md:px-4">
+            <div class="flex overflow-x-auto no-scrollbar md:justify-center space-x-1 md:space-x-4 py-2">
+                <button onclick="switchTab('tong-quan')" id="btn-tong-quan" class="tab-btn px-4 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap bg-amber-800 text-white shadow-sm">
+                    <i class="fa-solid fa-book-open mr-2"></i>Tổng Quan Chung
+                </button>
+                <button onclick="switchTab('mach-truyen')" id="btn-mach-truyen" class="tab-btn px-4 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap text-gray-600 hover:bg-gray-100">
+                    <i class="fa-solid fa-timeline mr-2"></i>Cốt Truyện & Mạch Trần Thuật
+                </button>
+                <button onclick="switchTab('phan-tich')" id="btn-phan-tich" class="tab-btn px-4 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap text-gray-600 hover:bg-gray-100">
+                    <i class="fa-solid fa-brain mr-2"></i>Phân Tích Chi Tiết (Nâng Cao)
+                </button>
+                <button onclick="switchTab('nghe-thuat')" id="btn-nghe-thuat" class="tab-btn px-4 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap text-gray-600 hover:bg-gray-100">
+                    <i class="fa-solid fa-palette mr-2"></i>Đặc Sắc Nghệ Thuật
+                </button>
+                <button onclick="switchTab('trac-nghiem')" id="btn-trac-nghiem" class="tab-btn px-4 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap text-gray-600 hover:bg-gray-100">
+                    <i class="fa-solid fa-file-pen mr-2"></i>Trắc Nghiệm Ôn Tập
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 flex-grow max-w-5xl">
+
+        <section id="tong-quan" class="tab-content active space-y-8 animate-fade-in">
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div class="flex items-center space-x-3 border-b border-gray-100 pb-4 mb-6">
+                    <div class="p-2.5 bg-amber-100 text-amber-800 rounded-lg"><i class="fa-solid fa-user-pen text-xl"></i></div>
+                    <h2 class="text-2xl font-serif font-bold text-gray-900">1. Nhà Văn Nam Cao (1917 - 1951)</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="md:col-span-2 space-y-4 text-justify">
+                        <p><strong class="text-amber-900">Tiểu sử:</strong> Tên khai sinh là Trần Hữu Tri. Quê tại làng Đại Hoàng, tổng Cao Đà, huyện Nam Sang, phủ Lí Nhân (nay là xã Hòa Hậu, huyện Lí Nhân, tỉnh Hà Nam). Nơi đây chính là nguyên mẫu trong nhiều sáng tác của ông với cái tên quen thuộc: <span class="font-semibold text-amber-800">làng Vũ Đại</span>. Ông xuất thân trong một gia đình nông dân nghèo và là người con duy nhất được ăn học tử tế. Trước Cách mạng, ông chật vật làm nhiều nghề (dạy học trường tư, làm gia sư, viết văn) để kiếm sống; sau Cách mạng, ông tích cực hoạt động văn nghệ và báo chí phục vụ kháng chiến.</p>
+                        <p><strong class="text-amber-900">Sự nghiệp & Đề tài:</strong> Trước Cách mạng tháng Tám, ngòi bút ông tập trung vào hai mảng lớn: người trí thức nghèo và người nông dân nghèo. Sau Cách mạng, ông hướng ngòi bút phục vụ đắc lực cuộc kháng chiến chống Pháp của dân tộc.</p>
+                    </div>
+                    <div class="bg-amber-50/60 p-5 rounded-xl border border-amber-100 space-y-3">
+                        <h4 class="font-bold text-amber-900 text-sm tracking-wide uppercase"><i class="fa-solid fa-bookmark mr-1"></i> Tác phẩm tiêu biểu trước và sau CM:</h4>
+                        <ul class="text-sm space-y-1.5 list-disc list-inside text-gray-700">
+                            <li><span class="italic">Chí Phèo</span> (1941)</li>
+                            <li><span class="italic">Giăng sáng</span> (1942)</li>
+                            <li><span class="italic">Lão Hạc</span> (1943)</li>
+                            <li><span class="italic">Đời thừa</span> (1943)</li>
+                            <li><span class="italic">Sống mòn</span> (1944)</li>
+                            <li><span class="italic">Đôi mắt</span> (1948)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-amber-950 text-amber-50 p-5 rounded-xl">
+                    <h3 class="font-serif font-semibold text-lg text-amber-300 mb-2"><i class="fa-solid fa-quote-left mr-2"></i>Quan điểm nghệ thuật nhân đạo sâu sắc (Kiến thức nâng cao)</h3>
+                    <div class="space-y-3 text-sm text-amber-100/90 text-justify">
+                        <p>Nam Cao là nhà văn hiện thực chủ nghĩa, có tấm lòng nhân đạo vô cùng sâu sắc. Ông luôn trăn trở về sứ mệnh của văn chương và đòi hỏi sự tìm tòi, sáng tạo không ngừng nghỉ:</p>
+                        <blockquote class="border-l-4 border-amber-500 pl-4 italic text-amber-200">
+                            "Văn chương không cần đến những người thợ khéo tay, làm theo một vài kiểu mẫu đưa cho. Văn chương chỉ dung nạp những người biết đào sâu, biết tìm tòi, khơi những nguồn chưa ai khơi và sáng tạo những cái gì chưa có." <span class="block text-right font-semibold text-xs mt-1">— Trích "Đời thừa"</span>
+                        </blockquote>
+                        <blockquote class="border-l-4 border-amber-500 pl-4 italic text-amber-200">
+                            "Một tác phẩm thật có giá trị, phải vượt lên bên trên tất cả các bờ cõi và giới hạn, phải là một tác phẩm chung cho cả loài người. Nó phải chứa đựng được một cái gì lớn lao, mạnh mẽ, vừa đau đớn lại vừa phấn khởi. Nó ca tụng lòng thương, tình bác ái, sự công bình… Nó làm cho người gần người hơn." <span class="block text-right font-semibold text-xs mt-1">— Trích "Đời thừa"</span>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div class="flex items-center space-x-3 border-b border-gray-100 pb-4 mb-6">
+                    <div class="p-2.5 bg-amber-100 text-amber-800 rounded-lg"><i class="fa-solid fa-book text-xl"></i></div>
+                    <h2 class="text-2xl font-serif font-bold text-gray-900">2. Tổng Quan Tác Phẩm "Chí Phèo"</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-justify">
+                    <div class="space-y-4">
+                        <p><strong class="text-amber-900">Hoàn cảnh sáng tác:</strong> Truyện ngắn xuất sắc này ra đời năm 1941. Tác giả viết dựa trên cơ sở người thật, việc thật tại chính quê hương làng Đại Hoàng của mình. Qua quá trình hư cấu, sáng tạo tài tình, Nam Cao đã dựng nên bức tranh hiện thực sinh động, sâu sắc về nông thôn Việt Nam trước Cách mạng tháng Tám năm 1945.</p>
+                        <p><strong class="text-amber-900">Ý nghĩa nhan đề qua các lần đổi tên:</strong>
+                            <ul class="list-none space-y-2 text-sm mt-1 pl-2">
+                                <li><i class="fa-solid fa-circle-dot text-amber-700 text-xs mr-2"></i><strong>Lúc đầu:</strong> <span class="italic font-semibold text-gray-700">"Cái lò gạch cũ"</span> — Nhấn mạnh sự quẩn quanh, bế tắc của số phận lưu manh hóa vô lối, lặp lại liên tục.</li>
+                                <li><i class="fa-solid fa-circle-dot text-amber-700 text-xs mr-2"></i><strong>Năm 1941 (NXB Đời mới đổi):</strong> <span class="italic font-semibold text-gray-700">"Đôi lứa xứng đôi"</span> — Hướng sự chú ý vào mối quan hệ dị biệt, mang đậm sắc thái hiếu kỳ giữa Chí Phèo và Thị Nở.</li>
+                                <li><i class="fa-solid fa-circle-dot text-amber-700 text-xs mr-2"></i><strong>Năm 1945 (In lại trong tập "Luống cày"):</strong> Nam Cao chính thức đặt tên lại là <span class="font-bold text-amber-800">"Chí Phèo"</span>. Nhan đề này hướng thẳng vào nhân vật trung tâm, khẳng định bản chất bản tính tốt đẹp bị vùi dập, đồng thời cất lên tiếng nói tố cáo đanh thép xã hội thực dân nửa phong kiến chà đạp con người.</li>
+                            </ul>
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 bg-gray-50 p-5 rounded-xl border border-gray-200">
+                        <p><strong class="text-amber-900">Bố cục văn bản (4 phần chính):</strong></p>
+                        <div class="space-y-2.5 text-sm">
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-amber-800 text-white text-xs px-2 py-0.5 rounded-md font-bold mt-0.5">P1</span>
+                                <p><strong>Từ đầu đến đoạn tỉnh lược thứ nhất:</strong> Tiếng chửi của Chí Phèo lúc say rượu và sự hé lộ đầy kinh ngạc về lai lịch dị biệt của nhân vật.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-amber-800 text-white text-xs px-2 py-0.5 rounded-md font-bold mt-0.5">P2</span>
+                                <p><strong>Tiếp đến đoạn tỉnh lược thứ hai:</strong> Chí Phèo ra tù, bị Bá Kiến khuất phục biến thành tay sai dữ tợn, trượt dài trên con đường tha hóa, trở thành con quỷ dữ làng Vũ Đại.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-amber-800 text-white text-xs px-2 py-0.5 rounded-md font-bold mt-0.5">P3</span>
+                                <p><strong>Tiếp đến "máu vẫn còn ứ ra":</strong> Cuộc gặp gỡ định mệnh với Thị Nở, sự thức tỉnh kỳ diệu của phần người lương thiện và bi kịch đau đớn khi bị cự tuyệt.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-amber-800 text-white text-xs px-2 py-0.5 rounded-md font-bold mt-0.5">P4</span>
+                                <p><strong>Còn lại:</strong> Hành động đến nhà Bá Kiến đòi lương thiện, thảm án kết thúc và phản ứng phức tạp của các tầng lớp dân cư làng Vũ Đại.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mach-truyen" class="tab-content space-y-8 animate-fade-in">
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div class="flex items-center space-x-3 border-b border-gray-100 pb-4 mb-6">
+                    <div class="p-2.5 bg-amber-100 text-amber-800 rounded-lg"><i class="fa-solid fa-timeline text-xl"></i></div>
+                    <h2 class="text-2xl font-serif font-bold text-gray-900">So Sánh Trình Tự Đời Đời Nhân Vật và Mạch Kể Tư Duy (Nâng Cao)</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-6 text-justify">Một trong những đột phá vĩ đại trong nghệ thuật tự sự của Nam Cao là việc phá vỡ trật tự thời gian tuyến tính thông thường để tạo ra mạch trần thuật hiện đại đầy lôi cuốn. Hãy cùng học sinh đối chiếu hai sơ đồ dưới đây:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="border border-gray-200 rounded-xl p-5 bg-amber-50/30 relative">
+                        <div class="absolute top-3 right-3 bg-gray-200 text-gray-700 text-xs font-bold px-2 py-0.5 rounded">Tự nhiên</div>
+                        <h3 class="font-bold text-amber-950 text-base mb-4 border-b border-amber-100 pb-2"><i class="fa-solid fa-arrow-down-long mr-2 text-amber-700"></i>Cốt truyện theo trật tự thời gian cuộc đời</h3>
+                        <ol class="space-y-4 text-xs md:text-sm pl-2">
+                            <li class="flex items-start"><span class="text-amber-800 font-bold mr-2">1.</span> Chí sinh ra, bị bỏ rơi ở lò gạch hoang.</li>
+                            <li class="flex items-start"><span class="text-amber-800 font-bold mr-2">2.</span> Lớn lên đi làm canh điền hiền lành cho nhà Lí Kiến, rồi bị bắt đi tù oan.</li>
+                            <li class="flex items-start"><span class="text-amber-800 font-bold mr-2">3.</span> Ra tù, biến đổi nhân hình lẫn nhân tính thành kẻ lưu manh.</li>
+                            <li class="flex items-start"><span class="text-amber-800 font-bold mr-2">4.</span> Bị Bá Kiến thuần phục, trở thành tay sai độc ác - con quỷ dữ của làng Vũ Đại.</li>
+                            <li class="flex items-start"><span class="text-amber-800 font-bold mr-2">5.</span> Gặp Thị Nở, được tình thương đánh thức khao khát hoàn lương.</li>
+                            <li class="flex items-start"><span class="text-amber-800 font-bold mr-2">6.</span> Bị từ chối tình cảm, tuyệt vọng đến đâm chết Bá Kiến và tự sát.</li>
+                        </ol>
+                    </div>
+
+                    <div class="border border-amber-200 rounded-xl p-5 bg-amber-50/70 relative shadow-sm">
+                        <div class="absolute top-3 right-3 bg-amber-800 text-white text-xs font-bold px-2 py-0.5 rounded">Nam Cao Kể</div>
+                        <h3 class="font-bold text-amber-950 text-base mb-4 border-b border-amber-200 pb-2"><i class="fa-solid fa-rotate mr-2 text-amber-800"></i>Mạch trần thuật thực tế trong tác phẩm</h3>
+                        <div class="text-xs bg-amber-900 text-amber-100 p-2 rounded mb-3 font-semibold text-center">Mạch kể: Hiện tại — Quá khứ — Hiện tại</div>
+                        <ol class="space-y-4 text-xs md:text-sm pl-2">
+                            <li class="flex items-start font-medium text-amber-900"><span class="bg-amber-800 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 shrink-0">4</span> Bắt đầu bằng hình ảnh hiện tại: Chí Phèo say rượu, vừa đi vừa chửi đời.</li>
+                            <li class="flex items-start text-gray-600"><span class="bg-gray-300 text-gray-700 rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 shrink-0">1</span> Ngoái lại quá khứ: Lai lịch sinh ra từ chiếc lò gạch hoang.</li>
+                            <li class="flex items-start text-gray-600"><span class="bg-gray-300 text-gray-700 rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 shrink-0">2</span> Quá trình lớn lên, đi làm canh điền hiền lành và bước ngoặt đi tù.</li>
+                            <li class="flex items-start text-gray-600"><span class="bg-gray-300 text-gray-700 rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 shrink-0">3</span> Sự tha hóa khủng khiếp sau khi ra tù.</li>
+                            <li class="flex items-start font-medium text-amber-900"><span class="bg-amber-800 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 shrink-0">5</span> Trở về thực tại: Đêm trăng gặp Thị Nở và hành trình hồi sinh nhân tính.</li>
+                            <li class="flex items-start font-medium text-amber-900"><span class="bg-amber-800 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 shrink-0">6</span> Cao trào bi kịch cự tuyệt, đòi lương thiện không thành và kết thúc đẫm máu.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-blue-50 border border-blue-200 p-5 rounded-xl text-justify text-sm">
+                    <h4 class="font-bold text-blue-900 mb-2"><i class="fa-solid fa-circle-info mr-2"></i>Vì sao nhà văn lại lựa chọn đảo trật tự kể độc đáo như vậy?</h4>
+                    <p class="text-blue-900/90 leading-relaxed">Sự phá vỡ trật tự thời gian biên niên sử cho thấy nhà văn hiện đại không chỉ chú tâm vào cốt truyện thô mà cực kỳ chú trọng <span class="font-semibold">cách kể truyện</span>. Cách nhập cuộc bằng tiếng chửi giúp gây tò mò, phác họa lập tức chân dung méo mó đầy bi kịch của một kẻ lạc loài. Quan trọng hơn, kết cấu đảo ngược này giúp Nam Cao đi sâu phân tích, lý giải bản chất nguyên nhân xã hội đã nhào nặn nên một số phận đau thương, đồng thời làm bật lên hành trình đi tìm lại chính mình đầy tuyệt vọng của nhân vật.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="phan-tich" class="tab-content space-y-8 animate-fade-in">
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 text-justify space-y-4">
+                <h3 class="text-xl font-serif font-bold text-amber-950 border-b border-amber-100 pb-2"><i class="fa-solid fa-comment-dots mr-2 text-amber-800"></i>1. Chi tiết mở đầu: Ý nghĩa tiếng chửi của Chí Phèo</h3>
+                <p>Tiếng chửi ở đầu tác phẩm thoạt nhìn là hành vi vô thức của một tên lưu manh say xỉn ngang ngược. Hắn chửi trời, chửi đời, chửi cả làng Vũ Đại rồi chửi đứa nào đẻ ra hắn. Nhưng đáp lại tiếng chửi đó là sự im lặng ghê rợn, "chẳng ai ra điều", vì ai cũng nghĩ "chắc nó trừ mình ra".</p>
+                <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-700 text-sm">
+                    <strong>Phân tích chiều sâu nâng cao:</strong> Bản chất sâu bên trong tiếng chửi ấy chính là tiếng nói của một người nông dân lương thiện thèm khát giao tiếp với đồng loại một cách mãnh liệt. Nó thể hiện sự hòa quyện bi kịch giữa: Phần ý thức lưu manh say xỉn bên ngoài và phần vô thức lương thiện, tỉnh táo cô đơn bên trong. Chí Phèo uống rượu không chỉ vì nghiện, rượu là công cụ để hắn kích hoạt sự quên, là cái cớ để gây sự, bộc lộ nỗi phẫn uất âm ỉ, đau đớn trong cõi vô thức mông lung trước thân phận bị loại trừ khỏi xã hội loài người.
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 text-justify space-y-4">
+                <h3 class="text-xl font-serif font-bold text-amber-950 border-b border-amber-100 pb-2"><i class="fa-solid fa-heart-pulse mr-2 text-amber-800"></i>2. Sự hồi sinh nhân tính kì diệu sau đêm gặp Thị Nở</h3>
+                <p>Quá trình thức tỉnh tâm lý của Chí Phèo vào buổi sáng hôm sau diễn ra hết sức tự nhiên, sâu sắc nhờ ngòi bút am tường tâm lý con người của Nam Cao:</p>
+                <ul class="space-y-3 pl-4 list-none text-sm">
+                    <li><i class="fa-solid fa-circle-check text-green-600 mr-2"></i><strong>Sự thức tỉnh của giác quan:</strong> Sau bao năm chìm trong những cơn say vô tận, lần đầu tiên Chí Phèo cảm nhận được không gian sống xung quanh với tiếng chim hót vui vẻ, tiếng cười nói của người đi chợ, tiếng anh thuyền chài gõ mái chèo đuổi cá...</li>
+                    <li><i class="fa-solid fa-circle-check text-green-600 mr-2"></i><strong>Sự trỗi dậy của hoài niệm & ý thức:</strong> Hắn nhớ lại quá khứ xa xôi, tươi đẹp khi mình từng có ước mơ giản dị: một gia đình nhỏ, chồng cuốc mướn cày thuê, vợ dệt vải. Đồng thời, nỗi sợ hãi cô đơn, tuổi già và bệnh tật ập đến - dấu hiệu cho thấy ý thức về cuộc đời đã quay về.</li>
+                    <li><i class="fa-solid fa-circle-check text-green-600 mr-2"></i><strong>Vai trò của bát cháo hành và tình thương:</strong> Bát cháo hành của Thị Nở mang tình thương giản dị không vụ lợi. Tình thương ấy đã nhóm lại đốm lửa lương thiện bị vùi lấp bấy lâu, khiến Chí Phèo thèm khát được làm hòa với mọi người, khao khát mãnh liệt được trở lại làm con người lương thiện.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 text-justify space-y-4">
+                <h3 class="text-xl font-serif font-bold text-amber-950 border-b border-amber-100 pb-2"><i class="fa-solid fa-heart-crack mr-2 text-amber-800"></i>3. Bi kịch bị từ chối quyền làm người lương thiện và cái chết</h3>
+                <p>Ước vọng hoàn lương vừa mới thắp lên đã bị dập tắt phũ phàng bởi định kiến phong kiến từ bà cô Thị Nở - đại diện cho cái nhìn khắt khe, tàn nhẫn của xã hội đương thời. Khi bị Thị Nở từ chối, Chí Phèo rơi vào hụt hẫng và tuyệt vọng tột cùng. Hắn tiếp tục uống rượu nhưng càng uống lại càng tỉnh, ngửi thấy thoang thoảng mùi cháo hành và bật khóc nức nở.</p>
+                <p>Trong cơn đau đớn tột đỉnh, bước chân vô thức không đưa hắn đến nhà bà cô Thị Nở như dự định, mà lại dẫn thẳng đến nhà kẻ thù gây ra mọi nỗi thống khổ đời mình là Bá Kiến. Câu hỏi đòi quyền làm người của Chí Phèo ngân vang như một lời chất vấn đanh thép:</p>
+                <div class="bg-red-50 text-red-950 p-4 rounded-xl border border-red-200 font-serif text-center text-lg italic my-2">
+                    "Ai cho tôi lương thiện? Làm thế nào cho mất được những vết mảnh chai trên mặt này? Tôi không thể là người lương thiện nữa!"
+                </div>
+                <p><strong class="text-amber-900">Ý nghĩa cái chết:</strong> Hành động kết liễu cuộc đời Bá Kiến và tự sát của Chí Phèo không đơn thuần là sự bế tắc hay thất bại cá nhân, mà đó là hành động đấu tranh tự phát cuối cùng để bảo vệ nhân phẩm. Chí Phèo thà chết trên ngưỡng cửa trở về làm người còn hơn tiếp tục sống kiếp quỷ dữ lưu manh bị đồng loại ghẻ lạnh. Cái chết ấy là tiếng nói tố cáo đanh thép, đồng thời khẳng định khát vọng lương thiện bất diệt trong tâm hồn người nông dân.</p>
+            </div>
+        </section>
+
+        <section id="nghe-thuat" class="tab-content space-y-8 animate-fade-in">
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div class="flex items-center space-x-3 border-b border-gray-100 pb-4 mb-6">
+                    <div class="p-2.5 bg-amber-100 text-amber-800 rounded-lg"><i class="fa-solid fa-palette text-xl"></i></div>
+                    <h2 class="text-2xl font-serif font-bold text-gray-900">Nghệ Thuật Tự Sự Bậc Thầy của Nam Cao</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-2">
+                        <h4 class="font-bold text-amber-900"><i class="fa-solid fa-eye mr-2"></i>Sự dịch chuyển điểm nhìn</h4>
+                        <p class="text-sm text-gray-700 text-justify">Nam Cao thực hiện những đột phá lớn khi phối hợp nhuần nhuyễn nhiều điểm nhìn khác nhau: Điểm nhìn của người kể chuyện khách quan, điểm nhìn bên trong lẫn bên ngoài của nhân vật (Chí Phèo, Bá Kiến, dân làng Vũ Đại). Sự luân phiên này mang lại cái nhìn đa chiều, sâu sắc về bản chất hiện thực.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-2">
+                        <h4 class="font-bold text-amber-900"><i class="fa-solid fa-mask mr-2"></i>Khám phá tâm lý sâu sắc</h4>
+                        <p class="text-sm text-gray-700 text-justify">Nhà văn chú trọng sâu sắc việc diễn tả, phân tích diễn biến tâm lý, xây dựng các tính cách phức tạp và đa diện. Quá trình thức tỉnh từ thể xác đến tâm hồn của Chí Phèo được miêu tả hết sức logic và tinh tế.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-2">
+                        <h4 class="font-bold text-amber-900"><i class="fa-solid fa-comments mr-2"></i>Ngôn ngữ trần thuật đa thanh</h4>
+                        <p class="text-sm text-gray-700 text-justify">Sử dụng linh hoạt ngôn ngữ nửa trực tiếp, đan xen giữa lời kể của tác giả và tiếng lòng bên trong của nhân vật. Ngôn ngữ vừa sinh động, gần gũi với đời sống thường nhật vừa mang đậm tính triết lý, suy tưởng cao.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+                    <div class="bg-amber-50/50 p-5 rounded-xl border border-amber-100 text-justify">
+                        <h4 class="font-serif font-bold text-amber-900 mb-2">Giá Trị Hiện Thực Sâu Sắc</h4>
+                        <p class="text-sm text-gray-700">Phản ánh chân thực tình cảnh khốn cùng, bế tắc của người nông dân nghèo trước Cách mạng bị đẩy vào con đường lưu manh hóa. Đồng thời, phơi bày bộ mặt tàn nhẫn, lọc lõi, cấu xé lẫn nhau của giai cấp thống trị (điển hình là Bá Kiến) ở nông thôn Việt Nam trước năm 1945.</p>
+                    </div>
+                    <div class="bg-amber-50/50 p-5 rounded-xl border border-amber-100 text-justify">
+                        <h4 class="font-serif font-bold text-amber-900 mb-2">Giá Trị Nhân Đạo Cao Cả</h4>
+                        <p class="text-sm text-gray-700">Phát hiện, trân trọng và ngợi ca bản chất lương thiện, nhân tính đẹp đẽ của con người ngay cả khi họ bị chà đạp thành quỷ dữ. Nhà văn thể hiện niềm đồng cảm sâu sắc với những số phận bất hạnh, đồng thời lên tiếng đòi quyền sống, quyền được công nhận làm người lương thiện cho họ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trac-nghiem" class="tab-content space-y-8 animate-fade-in">
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between border-b border-gray-100 pb-4 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2.5 bg-amber-100 text-amber-800 rounded-lg"><i class="fa-solid fa-file-pen text-xl"></i></div>
+                        <h2 class="text-2xl font-serif font-bold text-gray-900">Hệ Thống Trắc Nghiệm Ôn Tập Tác Phẩm</h2>
+                    </div>
+                    <span class="text-xs bg-amber-100 text-amber-800 font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-clock mr-1"></i> Không giới hạn thời gian</span>
+                </div>
+
+                <form id="quiz-form" class="space-y-6">
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                        <p class="font-semibold text-gray-900">Câu 1: Truyện ngắn "Chí Phèo" được Nam Cao sáng tác vào năm nào và lấy bối cảnh nguyên mẫu từ làng nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q1" value="A" class="text-amber-800 focus:ring-amber-800">
+                                <span>A. Năm 1943 - Làng Đại Hoàng</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q1" value="B" class="text-amber-800 focus:ring-amber-800">
+                                <span>B. Năm 1941 - Làng Đại Hoàng</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q1" value="C" class="text-amber-800 focus:ring-amber-800">
+                                <span>C. Năm 1945 - Làng Vũ Đại</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q1" value="D" class="text-amber-800 focus:ring-amber-800">
+                                <span>D. Năm 1941 - Tổng Cao Đà</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                        <p class="font-semibold text-gray-900">Câu 2: Đâu là trật tự đúng các lần đổi tên của nhan đề tác phẩm từ khi ra mắt đến nay?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q2" value="A" class="text-amber-800 focus:ring-amber-800">
+                                <span>A. Chí Phèo -> Cái lò gạch cũ -> Đôi lứa xứng đôi</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q2" value="B" class="text-amber-800 focus:ring-amber-800">
+                                <span>B. Đôi lứa xứng đôi -> Cái lò gạch cũ -> Chí Phèo</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q2" value="C" class="text-amber-800 focus:ring-amber-800">
+                                <span>C. Cái lò gạch cũ -> Đôi lứa xứng đôi -> Chí Phèo</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q2" value="D" class="text-amber-800 focus:ring-amber-800">
+                                <span>D. Cái lò gạch cũ -> Chí Phèo -> Luống cày</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                        <p class="font-semibold text-gray-900">Câu 3: Bản chất sâu bên trong tiếng chửi điên loạn lúc say rượu của Chí Phèo mang ý nghĩa gì?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q3" value="A" class="text-amber-800 focus:ring-amber-800">
+                                <span>A. Tiếng hét hăm dọa vô cớ của một tên lưu manh muốn ăn vạ</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q3" value="B" class="text-amber-800 focus:ring-amber-800">
+                                <span>B. Khát vọng giao tiếp mãnh liệt với đồng loại của một người cô đơn</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q3" value="C" class="text-amber-800 focus:ring-amber-800">
+                                <span>C. Biểu hiện thói nghiện ngập chửi bới vô căn cứ của dân giang hồ</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q3" value="D" class="text-amber-800 focus:ring-amber-800">
+                                <span>D. Lời chửi thề bộc phát chỉ nhằm mục đích trút giận lên làng Vũ Đại</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                        <p class="font-semibold text-gray-900">Câu 4: Mạch trần thuật cốt truyện thực tế của tác phẩm Chí Phèo diễn ra theo trật tự nào?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q4" value="A" class="text-amber-800 focus:ring-amber-800">
+                                <span>A. Tuyến tính thời gian từ khi sinh ra cho đến khi chết đi</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q4" value="B" class="text-amber-800 focus:ring-amber-800">
+                                <span>B. Đảo lộn trật tự thời gian theo mạch: Quá khứ -> Hiện tại -> Quá khứ</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q4" value="C" class="text-amber-800 focus:ring-amber-800">
+                                <span>C. Đảo lộn trật tự thời gian theo mạch: Hiện tại -> Quá khứ -> Hiện tại</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q4" value="D" class="text-amber-800 focus:ring-amber-800">
+                                <span>D. Tập trung toàn bộ bối cảnh trong quá khứ rồi mới nhắc hiện tại</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                        <p class="font-semibold text-gray-900">Câu 5: Cái chết của nhân vật Chí Phèo mang ý nghĩa sâu sắc nào dưới đây?</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q5" value="A" class="text-amber-800 focus:ring-amber-800">
+                                <span>A. Là một sự thất bại thảm hại, đầu hàng vô điều kiện trước số phận</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q5" value="B" class="text-amber-800 focus:ring-amber-800">
+                                <span>B. Sự giải thoát tiêu cực, trốn tránh trách nhiệm hoàn lương của bản thân</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q5" value="C" class="text-amber-800 focus:ring-amber-800">
+                                <span>C. Hành động tự phát bảo vệ nhân phẩm, khẳng định khao khát lương thiện bất diệt</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-50/40 transition">
+                                <input type="radio" name="q5" value="D" class="text-amber-800 focus:ring-amber-800">
+                                <span>D. Kết thúc tất yếu của một kẻ say rượu phá phách mất kiểm soát</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button type="button" onclick="checkAnswers()" class="bg-amber-800 hover:bg-amber-900 text-white font-semibold px-8 py-3 rounded-xl shadow transition-all transform hover:scale-[1.02]">
+                            <i class="fa-solid fa-paper-plane mr-2"></i>Nộp Bài & Xem Kết Quả
+                        </button>
+                    </div>
+                </form>
+
+                <div id="quiz-result" class="hidden mt-8 p-6 rounded-xl border text-center space-y-3">
+                    <h3 class="text-2xl font-serif font-bold" id="result-title"></h3>
+                    <p class="text-lg" id="result-score"></p>
+                    <p class="text-sm max-w-xl mx-auto text-gray-600" id="result-feedback"></p>
+                    <button type="button" onclick="resetQuiz()" class="mt-2 text-sm bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium transition">
+                        <i class="fa-solid fa-rotate-left mr-1"></i> Làm lại bài thi
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 text-center py-6 border-t border-gray-800 mt-12 text-sm">
+        <div class="container mx-auto px-4 space-y-2">
+            <p class="font-medium text-gray-300">Không Gian Học Tập Trực Tuyến — Tác phẩm Văn học Việt Nam</p>
+            <p class="text-xs text-gray-500">Thiết kế dành cho giáo viên và học sinh học tập, ôn luyện kiến thức cốt lõi đến nâng cao.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hàm chuyển đổi tab mượt mà
+        function switchTab(tabId) {
+            // Ẩn tất cả nội dung tab
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Reset trạng thái của tất cả các nút điều hướng
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-amber-800', 'text-white', 'shadow-sm');
+                btn.classList.add('text-gray-600', 'hover:bg-gray-100');
+            });
+
+            // Hiển thị nội dung tab được chọn
+            document.getElementById(tabId).classList.add('active');
+
+            // Thêm màu tích cực cho nút hiện tại
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            activeBtn.classList.remove('text-gray-600', 'hover:bg-gray-100');
+            activeBtn.classList.add('bg-amber-800', 'text-white', 'shadow-sm');
+
+            // Cuộn mượt lên đầu trang khi đổi tab
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Đáp án chuẩn
+        const correctAnswers = {
+            q1: 'B',
+            q2: 'C',
+            q3: 'B',
+            q4: 'C',
+            q5: 'C'
+        };
+
+        // Hàm kiểm tra đáp án trắc nghiệm
+        function checkAnswers() {
+            const form = document.getElementById('quiz-form');
+            let score = 0;
+            let total = Object.keys(correctAnswers).length;
+            let answeredCount = 0;
+
+            // Kiểm tra xem học sinh đã chọn đáp án chưa
+            for (let i = 1; i <= total; i++) {
+                const checkedRadio = form.querySelector(`input[name="q${i}"]:checked`);
+                if (checkedRadio) {
+                    answeredCount++;
+                    if (checkedRadio.value === correctAnswers[`q${i}`]) {
+                        score++;
+                    }
+                }
+            }
+
+            if (answeredCount < total) {
+                alert(`Em chưa hoàn thành hết bài trắc nghiệm! Hãy trả lời đầy đủ ${total} câu hỏi nhé.`);
+                return;
+            }
+
+            // Hiển thị khung kết quả
+            const resultDiv = document.getElementById('quiz-result');
+            const resultTitle = document.getElementById('result-title');
+            const resultScore = document.getElementById('result-score');
+            const resultFeedback = document.getElementById('result-feedback');
+
+            resultDiv.classList.remove('hidden');
+
+            // Tính điểm số hệ 10
+            let finalGrade = (score / total) * 10;
+
+            // Cấu hình hiển thị theo mức điểm
+            if (finalGrade === 10) {
+                resultDiv.className = "mt-8 p-6 rounded-xl border text-center space-y-3 bg-green-50 border-green-200 text-green-950";
+                resultTitle.innerHTML = "<i class='fa-solid fa-trophy text-3xl text-amber-500 mr-2 animate-bounce'></i>Xuất Sắc!";
+                resultFeedback.innerText = "Tuyệt vời! Em đã nắm rất vững kiến thức cốt lõi và nâng cao lý luận nghệ thuật về kiệt tác Chí Phèo của nhà văn Nam Cao.";
+            } else if (finalGrade >= 7) {
+                resultDiv.className = "mt-8 p-6 rounded-xl border text-center space-y-3 bg-blue-50 border-blue-200 text-blue-950";
+                resultTitle.innerHTML = "<i class='fa-solid fa-thumbs-up text-3xl text-blue-600 mr-2'></i>Khá Tốt!";
+                resultFeedback.innerText = "Chúc mừng em đã hoàn thành bài thi với kết quả tốt. Hãy đọc kỹ phần 'Phân tích chi tiết nâng cao' để đạt điểm tuyệt đối nhé!";
+            } else {
+                resultDiv.className = "mt-8 p-6 rounded-xl border text-center space-y-3 bg-red-50 border-red-200 text-red-950";
+                resultTitle.innerHTML = "<i class='fa-solid fa-pen-fancy text-3xl text-red-600 mr-2'></i>Cần Cố Gắng Hơn!";
+                resultFeedback.innerText = "Đừng nản chí! Hãy xem lại phần lý thuyết 'Tổng quan chung' và 'Mạch trần thuật' ở các tab phía trên rồi thử lại nhé.";
+            }
+
+            resultScore.innerHTML = `Điểm số của em: <span class="font-bold text-2xl">${finalGrade}</span> / 10 (Đúng ${score}/${total} câu)`;
+            
+            // Cuộn xuống phần kết quả để học sinh xem dễ dàng
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Hàm đặt lại bài trắc nghiệm về ban đầu
+        function resetQuiz() {
+            document.getElementById('quiz-form').reset();
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.classList.add('hidden');
+            window.scrollTo({ top: document.getElementById('trac-nghiem').offsetTop, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
