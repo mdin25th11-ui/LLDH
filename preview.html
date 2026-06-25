@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chí Phèo - Nam Cao</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+header{
+    background:#8b0000;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+nav{
+    background:#600000;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#8b0000;
+    margin-bottom:15px;
+}
+
+.flashcard{
+    width:100%;
+    max-width:600px;
+    margin:auto;
+    padding:40px;
+    background:#fff3cd;
+    border-radius:10px;
+    text-align:center;
+    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.question{
+    margin-bottom:20px;
+}
+
+button{
+    background:#8b0000;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#600000;
+}
+
+#result{
+    margin-top:15px;
+    font-size:20px;
+    color:green;
+}
+
+footer{
+    background:#8b0000;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CHÍ PHÈO - NAM CAO</h1>
+    <p>Website hỗ trợ học tập và ôn luyện Ngữ văn 11</p>
+</header>
+
+<nav>
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#hocbai">Học bài</a>
+    <a href="#flashcard">Flashcard</a>
+    <a href="#quiz">Trắc nghiệm</a>
+</nav>
+
+<div class="container">
+
+<section id="gioithieu" class="card">
+<h2>Giới thiệu tác phẩm</h2>
+<p>
+"Chí Phèo" là kiệt tác của Nam Cao, phản ánh sâu sắc số phận bi thảm của
+người nông dân trước Cách mạng tháng Tám và thể hiện giá trị nhân đạo sâu sắc.
+</p>
+</section>
+
+<section id="hocbai" class="card">
+<h2>Nội dung trọng tâm</h2>
+
+<h3>1. Giá trị hiện thực</h3>
+<p>
+Tố cáo xã hội phong kiến thực dân đã đẩy người nông dân lương thiện vào con đường tha hóa.
+</p>
+
+<br>
+
+<h3>2. Giá trị nhân đạo</h3>
+<p>
+Thể hiện niềm tin vào bản chất lương thiện của con người và khát vọng được làm người.
+</p>
+
+<br>
+
+<h3>3. Nhân vật chính</h3>
+<ul>
+<li>Chí Phèo</li>
+<li>Thị Nở</li>
+<li>Bá Kiến</li>
+<li>Bà cô Thị Nở</li>
+</ul>
+
+</section>
+
+<section id="flashcard" class="card">
+
+<h2>Flashcard</h2>
+
+<div class="flashcard" onclick="flipCard()" id="card">
+Bi kịch lớn nhất của Chí Phèo là gì?
+</div>
+
+</section>
+
+<section id="quiz" class="card">
+
+<h2>Trắc nghiệm</h2>
+
+<div class="question">
+<p><strong>Câu 1:</strong> Chí Phèo được tìm thấy ở đâu?</p>
+
+<label>
+<input type="radio" name="q1" value="0">
+Nhà Bá Kiến
+</label><br>
+
+<label>
+<input type="radio" name="q1" value="1">
+Lò gạch cũ
+</label><br>
+
+<label>
+<input type="radio" name="q1" value="0">
+Nhà Thị Nở
+</label>
+</div>
+
+<div class="question">
+<p><strong>Câu 2:</strong> Ai đánh thức phần người trong Chí Phèo?</p>
+
+<label>
+<input type="radio" name="q2" value="0">
+Bá Kiến
+</label><br>
+
+<label>
+<input type="radio" name="q2" value="1">
+Thị Nở
+</label><br>
+
+<label>
+<input type="radio" name="q2" value="0">
+Lý Cường
+</label>
+</div>
+
+<button onclick="checkQuiz()">
+Nộp bài
+</button>
+
+<div id="result"></div>
+
+</section>
+
+</div>
+
+<footer>
+<p>Website học tập Chí Phèo - Nam Cao</p>
+</footer>
+
+<script>
+
+let flipped=false;
+
+function flipCard(){
+
+const card=document.getElementById("card");
+
+if(!flipped){
+card.innerHTML=
+"Bi kịch bị cự tuyệt quyền làm người lương thiện.";
+}
+else{
+card.innerHTML=
+"Bi kịch lớn nhất của Chí Phèo là gì?";
+}
+
+flipped=!flipped;
+}
+
+function checkQuiz(){
+
+let score=0;
+
+let q1=document.querySelector('input[name="q1"]:checked');
+let q2=document.querySelector('input[name="q2"]:checked');
+
+if(q1) score+=parseInt(q1.value);
+if(q2) score+=parseInt(q2.value);
+
+document.getElementById("result").innerHTML=
+"Điểm của bạn: "+score+"/2";
+}
+
+</script>
+
+</body>
+</html>
